@@ -1,0 +1,121 @@
+@charset "utf-8";
+* {}
+#wrap {}
+.inner {width: 1080px; margin: 0 auto;}
+
+header {background-color: #fff; display: flex; justify-content: space-between; align-items: center;}
+header .logo {height: 30px; font-size: 42px; padding: 20px 0 40px 0;}
+header .logo:hover a {height: 30px; font-size: 42px; padding: 20px 0 40px 0; color: black; font-weight: bold;
+                     text-shadow: 1px 1px 2px black; transition: .5s;}
+.toggle {}
+.toggle span {background-color: #000; margin-bottom: 4px; 
+      border-radius: 10px; width: 25px; height: 3px; display: none;}
+
+.menubox {width: 60%; display: flex; flex-flow: column wrap; align-items: flex-end; }
+.menubox .loginBox {display: flex; font-size: 12px; margin-bottom: 10px; }
+.menubox .loginBox li {margin: 5px 10px; }
+.menubox .loginBox li:nth-child(1) {padding-right: 20px; border-right: 1px solid #ccc;}
+.menubox .loginBox li a {}
+
+nav { width: 100%; }
+nav .gnb {display: flex; flex-flow: row wrap; justify-content: space-between;}
+nav .gnb>li {width: 22%; position: relative;}
+nav .gnb>li:hover>a {color: royalblue; font-weight: bold;}
+nav .gnb .submenubg {width: 1080px; position: absolute; left: 0; top: 36px; z-index: 9999;}
+nav .gnb .submenubg .submenu {display: none; flex-flow: column wrap;}/*  #11ffee00; */
+nav .gnb .submenubg .submenu li {padding: 10px 0; background-color:#fff;}/* rgba(250, 245, 245,0.7 */
+.subbg{position: absolute; top: 90px; left: 0;  width: 100%; height: 120px; background-color: #fff;z-index: 999;
+       display: none;}
+
+#slider {}
+#slider .visualroll {}
+#slider .visualroll .swiper-wrapper {}
+#slider .visualroll .swiper-wrapper .swiper-slide {position: relative;}
+#slider .visualroll .swiper-wrapper .swiper-slide a img{ width: 100%;}
+#slider .visualroll .swiper-wrapper .swiper-slide .inbox {width: 100%; position: absolute; left: 50%; 
+                                                        transform: translateX(-50%); height: 500px; top: 0;}
+#slider .visualroll .swiper-wrapper .swiper-slide p {position: absolute; top: 20%; left: 20px; font-size: 48px;  }
+#slider .visualroll .swiper-wrapper .swiper-slide button {position: absolute; top: 32%; left: 20px; }
+#slider .visualroll .swiper-wrapper .swiper-slide.box3 button {top: 40%;}
+
+
+#content { width: 1080px; margin: 0 auto;}
+
+#content .mainTab { position: relative; overflow: hidden}
+#content .mainTab .menuTab { display: flex; flex-flow: row nowrap;}
+#content .mainTab .menuTab li { flex: 1 1 0; width: 30%; height: 30%; font-size: 32px; padding-top: 40px; text-align: center;}
+#content .mainTab .menuTab li a {}
+#content .mainTab .menuTab li:hover a {background-color: rgb(44, 96, 192);color: #fff; border-radius: 10%; transition: .5s;}
+
+.mainTab .conTab {}
+.mainTab .conTab .new_tab {display: none; flex-flow: row wrap; justify-content: space-evenly; text-align: center;}
+.mainTab .conTab .new_tab.on {display: flex;}
+.mainTab .conTab .new_tab li { width: 26%; margin: 20px 5%; background-color: #eee; border-radius: 10%; position: relative; padding-bottom: 20px;}
+.mainTab .conTab .new_tab li:hover {background-color: #ccc;}
+.mainTab .conTab .new_tab li p {}
+.mainTab .conTab .new_tab li p:nth-child(1) {position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);}
+.mainTab .conTab .new_tab li p:nth-child(2) {position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);}
+.mainTab .conTab .new_tab li a {}
+.mainTab .conTab .new_tab li a img { }
+
+.mainTab .conTab .sg_tab {display: none; flex-flow: row nowrap; justify-content: space-evenly; text-align: center;}
+.mainTab .conTab .sg_tab li {}
+.mainTab .conTab .sg_tab.on {display: flex;}
+.mainTab .conTab .sg_tab li a {}
+.mainTab .conTab .sg_tab li a img {width: 80%;margin: 5% 0;}
+
+.mainTab .conTab .new_tab li a img{}
+.mainTab .conTab .sg_tab li a img{}
+
+#video {position: relative;}
+#video video { width: 100%; margin: 100px 0 30px 0;}
+#video h2 {position: absolute; bottom: 20%; left: 50%; z-index: 9999; color: #fff; font-size: 52px; transform: translateX(-50%);}
+#video p {position: absolute; bottom: 13%; left: 50%; z-index: 9999; color: #fff; font-size: 20px; transform: translateX(-50%);}
+
+
+footer {width: 100%; text-align: center; background-color: #eee; height: 100px; line-height: 100px;} 
+footer p {}
+
+.top {position: fixed; right: 20px; bottom: 130px; background-color: black; width: 50px; height: 50px; text-align: center;
+      border-radius: 10%; line-height: 50px;}
+.top a {color: #fff;}
+
+@media screen and (max-width: 560px) {
+      .inner {width: 100%; margin: 0 auto;}
+      .menubox {display: none; width: 60%;
+                position: fixed; right: 0; top: 0; height: 100%; z-index: 9999999; background-color: rgb(204, 204, 204, 0.9);}
+      .menubox ul {padding: 10px; text-align: center; display: block;}
+      .menubox nav {padding: 0; display: block;}
+
+      .menubox .loginBox { margin-left: 40%;}
+
+      .menubox nav .gnb {margin-left: 80px;}
+      .menubox nav .gnb>li {padding: 10px; text-align: left;}
+      .menubox nav .gnb>li:last-child {width: 100px;}
+
+      .toggle { position: absolute; width: 23px; height: 16px; 
+            right: 15px; top: 35px; }
+      .toggle span {display: block;}
+      #slider .visualroll .swiper-wrapper .swiper-slide {position: relative;}
+      #slider .visualroll .swiper-wrapper .swiper-slide a img{ width: 100%;}
+      #slider .visualroll .swiper-wrapper .swiper-slide .inbox {width: 100%; position: absolute; left: 50%; 
+                                                            transform: translateX(-50%); height: 500px; top: 0;}
+      #slider .visualroll .swiper-wrapper .swiper-slide p {position: absolute; top: 20px; right: -100px; font-size: 48px; font-size: 12px;  }
+      #slider .visualroll .swiper-wrapper .swiper-slide button {position: absolute; top: 32%; left: 20px; }
+      #slider .visualroll .swiper-wrapper .swiper-slide.box3 button {top: 32%;}
+
+      nav .gnb .submenubg {display: none !important;}
+      .subbg {display: none !important;}
+
+      #content { width: 100%; margin: 0 auto;}
+      .mainTab .conTab .new_tab {display: none;}
+      .mainTab .conTab .new_tab li { width: 50%;}
+
+      .mainTab .conTab .sg_tab {flex-flow: row wrap;}
+
+      #video {position: relative;}
+      #video video { width: 100%; margin: 0 0 20px 0;}
+      #video h2 {font-size: 15px;}
+      #video p {font-size: 13px;  bottom: 11%;}
+
+      }
